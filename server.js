@@ -1,5 +1,6 @@
 const exp=require('express')
 const app=exp()
+require('dotenv').config()
 require('./db/conn')
 
 const Port=process.env.port || 3333
@@ -11,6 +12,7 @@ res.send("Hello From Server");
 })
 
 app.use("/user",require('./Router/user'))
+app.use("/login",require('./Router/login'))
 
 app.listen(Port,()=>{
     console.log(`Application is start on http://localhost:${Port}`);
