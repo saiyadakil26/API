@@ -13,6 +13,7 @@ res.send("Hello From Server");
 
 app.use("/user",require('./Router/user'))
 app.use("/login",require('./Router/login'))
+app.use("/samp_coll",require('./Router/samp_coll'))
 
 app.listen(Port,()=>{
     console.log(`Application is start on http://localhost:${Port}`);

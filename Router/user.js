@@ -3,6 +3,7 @@ const app=exp()
 const User=require('../model/user')
 
 app.use(exp.json())
+
 app.get('/',(req,res)=>{
     User.find(function(err, data) {
         res.status(200).send(data);
